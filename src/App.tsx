@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { generateLorem } from "./utils/generateLorem";
 import ParagraphInput from "./components/ParagraphInput";
+import CopyButton from "./components/CopyButton";
 
 function App() {
   const [paragraphs, setParagraphs] = useState<string[]>([]);
@@ -20,6 +21,8 @@ function App() {
           <p key={index}>{paragraph}</p>
         ))}
       </section>
+
+      <CopyButton paragraphs={paragraphs} />
     </main>
   );
 }
