@@ -157,11 +157,14 @@ input:focus-visible {
 
 .form-row {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .number-input {
-  width: 100%;
+  flex: 0 0 auto;
+  width: 110px;
   min-width: 0;
   height: 48px;
   padding: 0 14px;
@@ -187,6 +190,17 @@ input:focus-visible {
   margin: 9px 0 0;
   color: #b91c1c;
   font-size: 13px;
+  line-height: 1.5;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #a5b4fc;
+  outline-offset: 3px;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .btn {
@@ -325,12 +339,28 @@ input:focus-visible {
     border-radius: 14px;
   }
 
+  .card form {
+    text-align: center;
+  }
+
   .form-row {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .form-row .btn {
     width: 100%;
+  }
+
+  .number-input {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+
+  .number-input::-webkit-outer-spin-button,
+  .number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 
   .results-header {
