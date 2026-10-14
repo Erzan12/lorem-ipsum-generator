@@ -85,6 +85,7 @@ function App() {
 
         <footer className="site-footer">
           Made for designers and developers.
+          <p>Developed by Earl Jan Do</p>
         </footer>
       </div>
     </main>
